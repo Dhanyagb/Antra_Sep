@@ -14,4 +14,4 @@ JOIN
 	SELECT CustomerName, PrimaryContactPersonID, PhoneNumber FROM Sales.Customers_Archive
 	) AS c
 ON cx.personID = c.PrimaryContactPersonID
-WHERE cx.PhoneNumber = c.PhoneNumbe
+WHERE cx.PhoneNumber = c.PhoneNumber
