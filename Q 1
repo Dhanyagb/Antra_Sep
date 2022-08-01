@@ -1,4 +1,5 @@
-USE WideWorldImporters
+USE [WideWorldImporters]
+GO
 
 SELECT PersonID, FullName, PhoneNumber AS cp_PhoneNumber, FaxNumber AS cp_FaxNumber 
 FROM Application.people
