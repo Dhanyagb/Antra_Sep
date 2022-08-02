@@ -1,3 +1,5 @@
+/** If the customer's primary contact person has the same phone number as the customer’s phone number, list the customer companies **/
+
 USE WideWorldImporters
 GO
 
