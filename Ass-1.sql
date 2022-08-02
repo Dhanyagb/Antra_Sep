@@ -18,7 +18,7 @@ FROM
 	) AS emp
 JOIN
 	(
-	SELECT PrimaryContactPersonID pc,  SupplierID, PhoneNumber	 AS cp_PhoneNumber, FaxNumber  AS cp_FaxNumber FROM Purchasing.Suppliers
+	SELECT PrimaryContactPersonID pc,  SupplierID, PhoneNumber   AS cp_PhoneNumber, FaxNumber  AS cp_FaxNumber FROM Purchasing.Suppliers
 	UNION 
 	SELECT PrimaryContactPersonID pc, SupplierID, PhoneNumber    AS cp_PhoneNumber, FaxNumber  AS cp_FaxNumber FROM Purchasing.Suppliers_Archive
 	UNION
