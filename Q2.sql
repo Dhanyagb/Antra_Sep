@@ -9,7 +9,7 @@ FROM (
 	UNION
 	SELECT PersonID, PhoneNumber FROM Application.People_Archive
 	) AS cx
-JOIN
+INNER JOIN
 	(
 	SELECT CustomerName, PrimaryContactPersonID, PhoneNumber FROM Sales.customers
 	UNION
