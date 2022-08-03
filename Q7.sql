@@ -1,4 +1,4 @@
-/** 7.	List of States and Avg dates for processing (confirmed delivery date – order date). **/
+/** 7.	List of States and Avg dates for processing (confirmed delivery date â€“ order date). **/
 
 USE WideWorldImporters
 GO
@@ -9,5 +9,6 @@ JOIN [Sales].[CustomerTransactions] ct
 ON sp.LastEditedBy = ct.LastEditedBy
 JOIN [Sales].[Orders] si
 ON ct.CustomerID = si.CustomerID
+ORDER BY StateProvinceName;
 
 
