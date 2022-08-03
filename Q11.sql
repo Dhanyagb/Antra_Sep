@@ -2,6 +2,6 @@
 
 USE WideWorldImporters
 GO
-SELECT [CityID],[CityName],[ValidFrom]
+SELECT [CityName],[ValidFrom]
 FROM [Application].[Cities]
 WHERE ValidFrom > '2015-01-01'
