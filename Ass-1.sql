@@ -16,7 +16,7 @@ FROM
 	UNION
 	SELECT PersonID, FullName, FaxNumber, PhoneNumber FROM Application.People_Archive WHERE IsEmployee = 0
 	) AS emp
-JOIN
+INNER JOIN
 	(
 	SELECT PrimaryContactPersonID pc,  SupplierID, PhoneNumber   AS cp_PhoneNumber, FaxNumber  AS cp_FaxNumber FROM Purchasing.Suppliers
 	UNION 
