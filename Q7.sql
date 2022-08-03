@@ -9,6 +9,6 @@ JOIN [Sales].[CustomerTransactions] ct
 ON sp.LastEditedBy = ct.LastEditedBy
 JOIN [Sales].[Orders] si
 ON ct.CustomerID = si.CustomerID
-ORDER BY StateProvinceName;
+ORDER BY sp.StateProvinceName;
 
 
