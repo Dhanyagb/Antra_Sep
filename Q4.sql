@@ -5,16 +5,16 @@ GO
 SELECT wsi.[StockItemID], wsi.[StockItemName],po.[OrderDate],
 		SUM(sil.Quantity) AS Total_Quantity
 FROM [Purchasing].[PurchaseOrderLines] pol 
-JOIN [Purchasing].[PurchaseOrders] po
+INNER JOIN [Purchasing].[PurchaseOrders] po
 ON pol.PurchaseOrderID = po.PurchaseOrderID 
-JOIN
+INNER JOIN
 	(SELECT [StockItemID],[StockItemName]
 	FROM [Warehouse].[StockItems]
 	UNION
 	SELECT[StockItemID],[StockItemName]
 	FROM [Warehouse].[StockItems_Archive]) AS wsi
 ON wsi.StockItemID = pol.StockItemID
-JOIN[Sales].[InvoiceLines] sil
+INNER JOIN[Sales].[InvoiceLines] sil
 ON sil.StockItemID = wsi.StockItemID
 WHERE po.OrderDate = '2013'
 GROUP BY wsi.[StockItemID], wsi.[StockItemName],po.[OrderDate]
