@@ -1,3 +1,5 @@
+/** 16.	List all stock items that are manufactured in China. (Country of Manufacture) **/
+
 USE WideWorldImporters
 GO
 
